@@ -1,0 +1,19 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>users</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+	<ion-card *ngFor="let user of users">
+		<ion-item (click)="navigateDetails(user.id)">
+			<div slot="start">
+				<ion-img src="{{user.profpic || 'asset:/noImage.png'}}" />
+			</div>
+			<div>
+				<ion-text style="font-weight: 'bold'; font-size: 20">{{user.username}}</ion-text>
+				<ion-text style="font-size: 18">{{user.name}}</ion-text>
+			</div>
+		</ion-item>
+	</ion-card>
+</ion-content>

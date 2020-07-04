@@ -1,5 +1,7 @@
 {
   "name": "SampleCRUD",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

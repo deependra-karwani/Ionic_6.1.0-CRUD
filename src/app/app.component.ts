@@ -4,6 +4,11 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { FlagService } from './flag.service';
+import { Plugins } from '@capacitor/core';
+import { HttpService } from './http.service';
+const { SplashScreen:Splash } = Plugins;
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -13,7 +18,9 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+	private statusBar: StatusBar,
+	public flag: FlagService,
+	public local: HttpService
   ) {
     this.initializeApp();
   }
@@ -21,7 +28,8 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
+	  this.splashScreen.hide();
+	  Splash.hide();
     });
   }
 }

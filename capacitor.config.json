@@ -1,0 +1,18 @@
+{
+  "appId": "com.samplecrud",
+  "appName": "SampleCRUD",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0,
+      "launchAutoHide": false,
+      "backgroundColor": "#000",
+      "androidSplashResourceName": "splash",
+      "splashFullScreen": true,
+      "splashImmersive": true
+    }
+  },
+  "cordova": {}
+}
